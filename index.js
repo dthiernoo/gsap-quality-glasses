@@ -19,7 +19,13 @@ class App {
     }
 
     _setInitialStates() {
-        gsap.set('.hero__small-text, .hero__img', {
+        document.addEventListener('click', (e) => console.log(e.clientX))
+        // 450 entering
+        // 869 exiting
+        // 1053 entering
+        // 1471 exiting
+
+        gsap.set('.blur, .clear', {
             x: 0,
         })
     }
@@ -31,12 +37,40 @@ class App {
     }
 
     _createIntro() {
+
+        // const clear = document.querySelectorAll("#animation span class="clear"");
+        // clear.forEach(element => {
+        //     element.classList.add("hide")
+        //     const ele = clear.getBoundingClientRect();
+
+        //     console.log(ele.x)
+
+        // })
+
         const tl = gsap.timeline();
 
-        tl.to('.hero__small-text, .hero__img', {
-            opacity: 1,
-            x: 580,
-            duration: 80
+        // const letters = document.getElementsByClassName("clear");
+        // for (let i = 0; i < letters.length; i++) {
+        //     tl.to(letters[i], { x: "50px", duration: 1 });
+        // }
+
+        // tl.to('.blur_container, .clear', {
+        //     opacity: 1,
+        //     x: 580,
+        //     ease: 'none',
+        //     duration: 80
+        // }).blur, .blur_container
+
+        gsap.to('.blur_container', {
+            x: 11580,
+            ease: 'none',
+            duration: 200
+        })
+
+        tl.to('.clear_container', {
+            paddingLeft: 11580,
+            ease: 'none',
+            duration: 100
         })
     }
 
