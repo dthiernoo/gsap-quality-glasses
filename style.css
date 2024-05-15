@@ -124,8 +124,6 @@ h2 {
 }
 
 .blur_container {
-    
-
     font-size: 5rem;
     position: absolute;
     text-transform: uppercase;
@@ -134,15 +132,11 @@ h2 {
     
     z-index: -999;
     top: 400px;
-
-
 }
 
 .blur {
     filter: blur(7px);
 }
-
-
 
 .clear_container {
     font-size: 5rem;
@@ -180,25 +174,6 @@ h2 {
     mask-repeat: no-repeat; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .btn-primary {
     text-decoration: none;
     color: var(--text);
@@ -226,6 +201,5 @@ h2 {
     cursor: pointer;
     font-weight: 400;
 }
-
 
 /* -------- END HERO SECTION --------- */
